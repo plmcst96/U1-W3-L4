@@ -1,7 +1,7 @@
 const cellAllTab = []
 
 const numberOfCell = function () {
-    for (let i = 0; i < 77; i++) {
+    for (let i = 0; i < 100; i++) {
         cellAllTab.push(i)
     }
 }
@@ -20,6 +20,7 @@ const numberInCell = function (i) {
     const positionButton = document.getElementById('tabellone')
     const newButton = document.createElement('button')
     newButton.classList.add('newBtn')
+    newButton.style.margin = '2em 15em 3em 15em'
     newButton.innerText = 'GIRA LA FORTUNA'
     newButton.addEventListener('click', getNum)
     positionButton.appendChild(newButton)
@@ -28,18 +29,18 @@ const numberInCell = function (i) {
 const previousNumber = []
 
 const getNum = function () {
-    const randomNumber = Math.floor(Math.random() * 77)
-    console.log(randomNumber)
+    let randomNumber = Math.floor(Math.random() * 100)
+
+    while (previousNumber.includes(randomNumber)) {
+        randomNumber = Math.floor(Math.random() * 100)
+    }
+    previousNumber.push(randomNumber)
+    console.log('ecco')
 
     const allTheCells = document.querySelectorAll('.cell')
-
     allTheCells.forEach((cell) => {
-        console.log(cell.innerText)
         if (parseInt(cell.innerText) === randomNumber) {
-            console.log('trovato')
             cell.classList.add('selector')
         }
     })
-
 }
-
