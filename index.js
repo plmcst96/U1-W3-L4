@@ -25,9 +25,21 @@ const numberInCell = function (i) {
     positionButton.appendChild(newButton)
 }
 
+const previousNumber = []
+
 const getNum = function () {
     const randomNumber = Math.floor(Math.random() * 77)
     console.log(randomNumber)
+
+    const allTheCells = document.querySelectorAll('.cell')
+
+    allTheCells.forEach((cell) => {
+        console.log(cell.innerText)
+        if (parseInt(cell.innerText) === randomNumber) {
+            console.log('trovato')
+            cell.classList.add('selector')
+        }
+    })
 
 }
 
