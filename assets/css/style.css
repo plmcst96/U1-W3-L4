@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f6f4f3;
+}
+h1 {
+  font-size: 4em;
+  text-align: center;
+  font-weight: bold;
+  margin: 1em;
+  color: #6b7966;
+}
+.instructions {
+  margin: 3em 5em 3em 5em;
+}
+.instructions h3 {
+  line-height: 2em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.instructions p {
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.instructions button {
+  border-style: none;
+  padding: 0.7em;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #6b7966;
+  color: #f6f4f3;
+  margin-top: 1em;
+}
+
+#tabellone {
+  width: 800px;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tabellone .cell {
+  background-color: #acb8a8;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  text-align: center;
+  padding: 0.5em;
+  color: #606062;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.newBtn {
+  border-style: none;
+  padding: 0.7em;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #df9c96;
+  color: #f6f4f3;
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+.selector {
+  background-color: red;
+}
